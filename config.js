@@ -1,6 +1,6 @@
-var mongoDevUri = process.env.MONGOHQ_URL || "localhost:27017/nodetest1";
-var mongoStageUri = process.env.MONGOHQ_URL || "localhost:27017/nodetest1";
-var mongoProdUri = process.env.MONGOHQ_URL || "localhost:27017/nodetest1";
+var mongoDevUri = process.env.MONGOLAB_URI || "localhost:27017/nodetest1";
+var mongoStageUri = process.env.MONGOLAB_URI || "localhost:27017/nodetest1";
+var mongoProdUri = process.env.MONGOLAB_URI || "localhost:27017/nodetest1";
 
 var config = {
   local: {
