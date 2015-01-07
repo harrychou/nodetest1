@@ -41,7 +41,7 @@ div.footer-container>div {
     margin-right: auto; 
     width: 60%; 
     padding: 10px;
-    background-color: rgba(0,255,0,0.2);
+    background-color: #ccc;
 }
 
 @media (max-width: 1000px) {
@@ -85,3 +85,6 @@ table.table tr>th {
   color: #aaa;
 }
 
+div.main {
+  padding: 20px 25px;
+}
