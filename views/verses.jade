@@ -4,11 +4,17 @@ extends layout
 block content
   h1
     Bible Verses
-  table
+  table.table()
     tr
+      th  主題/Topic
       th  經節
       th  經文
+      th  Verse
+      th  Text
       each v, i in verses
         tr
-          td  #{v.cn}
+          td(nowrap)  #{v.cn_topic}/#{v.en_topic}
+          td(nowrap)  #{v.cn}
           td  #{v.cn_text}
+          td(nowrap) #{v.en}
+          td  #{v.en_text}

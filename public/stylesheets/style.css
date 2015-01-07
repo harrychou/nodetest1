@@ -7,10 +7,6 @@ a {
   color: #00B7FF;
 }
 
-table {
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
+table.table tr>th {
+  background-color: orange;
 }
