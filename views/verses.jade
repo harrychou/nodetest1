@@ -1,0 +1,14 @@
+extends layout
+extends layout
+
+block content
+  h1
+    Bible Verses
+  table
+    tr
+      th  經節
+      th  經文
+      each v, i in verses
+        tr
+          td  #{v.cn}
+          td  #{v.cn_text}
