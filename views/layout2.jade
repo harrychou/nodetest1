@@ -1,0 +1,33 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js')
+
+    script(type='text/javascript', src='/javascripts/memorize_bible_verse_game_1.js')
+    link(rel='stylesheet', href='/stylesheets/memorize_bible_verse_game_1.css')
+  body
+    div.page-wrap
+      div.container
+        div#sidebar.col-md-2.fill(style="background-color: #333; color: white")
+          h1(style='text-align:center') BIBLE VERSES
+          div(style="margin-top:30px;margin-bottom:50px;text-align:center;") 
+            a(href="/")
+              img(src="/images/church.png")
+          ul.nav
+            li 
+              a(href='http://blog.harrychou.com/') About
+            li
+              a(href='http://blog.harrychou.com/') Blog
+            li
+              a(href='/verses') Bible Verses
+        div.col-md-10.fill(style="background-color: white")
+          block content
+        div.footer-container
+          div -- website designed and maintained by Harry Chou @2014 --
+

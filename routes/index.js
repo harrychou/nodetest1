@@ -21,12 +21,35 @@ router.get('/userlist', function(req, res) {
     });
 });
 
-/* GET Userlist page. */
+/* GET bible verses page. */
 router.get('/verses', function(req, res) {
     var db = req.db;
     var collection = db.get('bibleverses');
     collection.find({},{},function(e,docs){
         res.render('verses', {
+            "verses" : docs
+        });
+    });
+});
+
+/* GET first game. */
+router.get('/memorize_bible_verse_game_1', function(req, res) {
+    var db = req.db;
+    var collection = db.get('bibleverses');
+    collection.find({},{},function(e,docs){
+        res.render('memorize_bible_verse_game_1', {
+            "verses" : docs
+        });
+    });
+});
+
+
+/* GET first game. */
+router.get('/memorize_bible_verse_game_2', function(req, res) {
+    var db = req.db;
+    var collection = db.get('bibleverses');
+    collection.find({},{},function(e,docs){
+        res.render('memorize_bible_verse_game_2', {
             "verses" : docs
         });
     });

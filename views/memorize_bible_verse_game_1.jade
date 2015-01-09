@@ -1,0 +1,24 @@
+extends layout2
+
+block content
+  - var v = verses[Math.floor(Math.random()*verses.length)]
+  h1 jQuery UI Drag and Drop Example - #{v.en}
+  #content
+    div(style="border:1px solid orange; padding:10px; margin: 10px; color:red;") 
+      | Rearrange the words for the bible verse 
+      | <a href="https://www.biblegateway.com/passage/?search=#{v.en}&version=NIV" target="new"> [#{v.en}] </a>
+    #successMessage
+      h4 #{v.en_text}
+
+    #cardPile  
+    #cardSlots  
+
+  script.
+    var verse = "#{v.en_text}";
+    var correctCards = 0;
+    var words = verse.replace(/[.,\s?!:]/g, ' ').replace(/\s+/g, ' ').replace(/^\s+/g, '').replace(/\s+$/g, '').split(' ');
+    var words_copy = words.slice(0); // copy
+    // Create the pile of shuffled cards
+    words.sort( function() { return Math.random() - .5 } );
+
+
