@@ -1,8 +1,10 @@
-extends layout1
+extends layout
 
 block content
   h1
-    Bible Verses
+    | Bible Verses 
+  p Play drag-and-drop bible verse game 
+    a.glyphicon.glyphicon-play(href="/memorize_bible_verse_game_1/random") 
   table.table
     thead
       tr
@@ -19,5 +21,5 @@ block content
           td  #{v.cn_text}
           td(nowrap) 
             | #{v.en} 
-            a(href="/memorize_bible_verse_game_1/#{v.en}") >>
+            a.glyphicon.glyphicon-play(href="/memorize_bible_verse_game_1/#{v.en}") 
           td  #{v.en_text}

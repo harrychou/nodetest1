@@ -3,11 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Harry Chou' });
+  res.render('index', { 
+        title: 'Harry Chou' 
+    });
 });
 
 router.get('/helloworld', function(req, res) {
-  res.render('helloworld', {title: 'Hello, World!'})
+  res.render('helloworld', {
+        title: 'Hello, World!'
+    });
 });
 
 /* GET Userlist page. */
@@ -27,18 +31,19 @@ router.get('/verses', function(req, res) {
     var collection = db.get('bibleverses');
     collection.find({},{},function(e,docs){
         res.render('verses', {
-            "verses" : docs
+            "siteTitle" : "BIBLE VERSES",
+            "verses" : docs 
         });
     });
 });
 
 /* GET first game. */
 router.get('/memorize_bible_verse_game_1/:verse', function(req, res) {
-    console.log(req.params);
     var db = req.db;
     var collection = db.get('bibleverses');
     collection.find({},{},function(e,docs){
         res.render('memorize_bible_verse_game_1', {
+            "siteTitle" : "BIBLE VERSES",
             "verses" : docs, 
             "verse" : req.params.verse
         });

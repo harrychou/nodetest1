@@ -34,6 +34,24 @@ app.use(function(req,res,next){
     next();
 });
 
+app.get('/verses/json', function(req, res) {
+    var db = req.db;
+    var collection = db.get('bibleverses');
+    collection.find({},{},function(e,docs){
+        res.send(docs);
+    });
+});
+app.get('/verses/json/:id', function(req, res) {
+    var db = req.db;
+    var collection = db.get('bibleverses');
+    collection.find({},{},function(e,docs){
+        var v1 = docs.filter(function(item) {
+            return item.en.toUpperCase().replace(/\s+/g, '') === req.params.id.toUpperCase().replace(/\s+/g, ''); 
+        });
+        res.send(v1);
+    });
+});
+
 app.use('/', routes);
 app.use('/users', users);
 
