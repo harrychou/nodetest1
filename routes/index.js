@@ -33,12 +33,14 @@ router.get('/verses', function(req, res) {
 });
 
 /* GET first game. */
-router.get('/memorize_bible_verse_game_1', function(req, res) {
+router.get('/memorize_bible_verse_game_1/:verse', function(req, res) {
+    console.log(req.params);
     var db = req.db;
     var collection = db.get('bibleverses');
     collection.find({},{},function(e,docs){
         res.render('memorize_bible_verse_game_1', {
-            "verses" : docs
+            "verses" : docs, 
+            "verse" : req.params.verse
         });
     });
 });

@@ -1,7 +1,8 @@
 extends layout2
 
 block content
-  - var v = verses[Math.floor(Math.random()*verses.length)]
+  - var v = (verse) ? verses.filter(function(item) { return item.en.toUpperCase().replace(/\s+/g, '') === verse.toUpperCase().replace(/\s+/g, '');})[0] : verses[Math.floor(Math.random()*verses.length)];
+  - v = (v) ? v : verses[Math.floor(Math.random()*verses.length)];
   h1 jQuery UI Drag and Drop Example - #{v.en}
   #content
     div(style="border:1px solid orange; padding:10px; margin: 10px; color:red;") 
