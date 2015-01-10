@@ -5,7 +5,7 @@ block content
 
   script(type='text/javascript', src='/javascripts/memorize_bible_verse_game_1.js')
   link(rel='stylesheet', href='/stylesheets/memorize_bible_verse_game_1.css')
-    
+
   - var v = (verse) ? verses.filter(function(item) { return item.en.toUpperCase().replace(/\s+/g, '') === verse.toUpperCase().replace(/\s+/g, '');})[0] : verses[Math.floor(Math.random()*verses.length)];
   - v = (v) ? v : verses[Math.floor(Math.random()*verses.length)];
   h1 jQuery UI Drag and Drop Example - #{v.en}
@@ -28,7 +28,7 @@ block content
     var breakLongPhrase = function (phrase, n) {
         var result = [];
         phrase = stringTrim(phrase);
-        var phrases = phrase.split(/[,.;!?"]/); 
+        var phrases = phrase.split(/[-,.;!?"]/); 
         for (var i = 0; i < phrases.length; i++) {
             var p = stringTrim(phrases[i]);
             if (!p) continue;

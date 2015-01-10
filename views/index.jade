@@ -2,5 +2,29 @@ extends layout
 
 block content
   div.main
-    h1 Welcome to Harry Chou's Website
-    p Current Date/Time: #{new Date()}
+    div.jumbotron
+      h1 Harry Chou's Website
+      p - a software developer, husband, father and christian 
+
+  style.
+    div.jumbotron {
+      width: 60%;
+      margin-top: 20%;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      background-color: rgba(200, 200, 200, 0.1);
+      color: white;
+    }
+
+    div#right {
+      background: url(/images/bg.png) no-repeat center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    div.footer-container>div {
+      background-color: rgba(0,0,0,0);
+    }

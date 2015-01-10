@@ -15,8 +15,9 @@ block content
         th  Text
     tbody
       each v, i in verses
+        - var topic = (v.cn_topic) ? v.cn_topic + '/' + v.en_topic : ''
         tr
-          td(nowrap)  #{v.cn_topic}/#{v.en_topic}
+          td(nowrap)  #{topic}
           td(nowrap)  #{v.cn}
           td  #{v.cn_text}
           td(nowrap) 
