@@ -20,11 +20,11 @@ function touchHandler(event) {
 $( init );
 
 function init() {
-
-    document.addEventListener("touchstart", touchHandler, true);
-    document.addEventListener("touchmove", touchHandler, true);
-    document.addEventListener("touchend", touchHandler, true);
-    document.addEventListener("touchcancel", touchHandler, true);
+    var contentDiv = document.getElementById("content");
+    contentDiv.addEventListener("touchstart", touchHandler, true);
+    contentDiv.addEventListener("touchmove", touchHandler, true);
+    contentDiv.addEventListener("touchend", touchHandler, true);
+    contentDiv.addEventListener("touchcancel", touchHandler, true);
 
   // Hide the success message
   $('#successMessage').delay(5000).fadeOut(400);
