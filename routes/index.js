@@ -96,4 +96,15 @@ router.post('/adduser', function(req, res) {
         }
     });
 });
+
+router.get('/d3/example1', function(req, res) {
+    res.render('d3/example1', { title: 'D3 Example 1' });
+});
+
+router.get('/timeline/taiwan', function(req, res) {
+    res.render('timeline/taiwan', { title: 'Timeline for Taiwan History' });
+});
+
+
+
 module.exports = router;

@@ -32,6 +32,28 @@
   box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
 
+@media (max-width: 1000px) {
+  
+  #content {
+    margin: 20px 0;
+  }
+
+  /* Slots for final card positions */
+
+  #cardSlots {
+    margin: 0;
+  }
+
+  /* The initial pile of unsorted cards */
+
+  #cardPile {
+    margin: 0;
+  }
+  #cardSlots, #cardPile {
+    padding: 0;
+    width: 100%; 
+  }
+}
 /* Individual cards and slots */
 
 #cardSlots div, #cardPile div {

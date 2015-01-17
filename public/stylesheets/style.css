@@ -45,6 +45,12 @@ div.footer-container>div {
 }
 
 @media (max-width: 1000px) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
   h1,h2 {
       margin: 0;
       text-align: center;
@@ -61,6 +67,7 @@ div.footer-container>div {
   div.footer-container>div {
       width: 100%; 
   }  
+
 }
 
 table.table tr>th {

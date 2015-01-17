@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  script(src="/javascripts/d3.js")
+  script.
+    function draw(data) {
+      "use strict";
+      d3.select("#d3-div")
+        .append("ul")
+        .selectAll("li")
+        .data(data)
+        .enter()
+        .append("li")
+        .text(function (d) {
+          return d.name + ": " + d.status;
+        });
+    }
+  h1
+    | D3.js Example 1
+  div#d3-div
+
+  script.
+    d3.json("/data/service_status.json", function(error, data) {
+      alert(data)
+    });
+    
